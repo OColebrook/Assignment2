@@ -1,0 +1,27 @@
+<script src="./js/client.js"></script>
+
+<div class="container">
+
+  <div class="section">
+    <h1>All Pokemon</h1>
+    <div class="sprite-container">
+      {{#each pokemonlist}}
+      <button id = "{{this.dexNumber}}"class="selectorButtons">
+        <img src={{this.smallImageUrl}} />
+        <span>{{this.name}}</span>
+      </button>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="details">
+      <h1>Details</h1>
+      <img id="image" src="{{image}}"/>
+      <h2 id="dexandname">#{{dexNumber}} {{name}}</h2>
+      <p id="types"><strong>Type/s: </strong>{{types}}</p>
+      <p id="about"><strong>About {{name}}: </strong> {{dexEntry}}</p>
+    </div>
+  </div>
+
+</div>
